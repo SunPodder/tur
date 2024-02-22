@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index a73a9a6b..aab6e0f0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -5,7 +5,7 @@ INSTALL ?= install
+ 
+ DEBUG_FLAGS := -g -O0 -DDEBUG
+ RELEASE_FLAGS := -O3 -DNDEBUG -flto
+-CXXFLAGS := -std=c++20 -fdiagnostics-color -pedantic-errors -Wall -Wextra -Wpedantic
++CXXFLAGS := -std=c++20 -fdiagnostics-color -pedantic-errors -Wall -Wextra -Wpedantic -Wl,-rpath=/data/data/com.termux/files/usr/lib
+ ifeq ($(RELEASE), 1)
+ 	CXXFLAGS += $(RELEASE_FLAGS)
+ else
